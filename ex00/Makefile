@@ -1,7 +1,7 @@
 
 FLAGS = -Wall -Wextra -Werror -std=c++98 -fsanitize=address -Wshadow
 CC = c++
-FILE = main.cpp Animal.cpp Dog.cpp Cat.cpp WrongAnimal.cpp WrongCat.cpp
+FILE = main.cpp  Bureaucrat.cpp
 NAME = main 
 
 all: $(NAME)
