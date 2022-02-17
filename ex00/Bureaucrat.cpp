@@ -6,7 +6,7 @@
 /*   By: rdutenke <rdutenke@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/15 16:55:55 by rdutenke          #+#    #+#             */
-/*   Updated: 2022/02/17 20:22:22 by rdutenke         ###   ########.fr       */
+/*   Updated: 2022/02/17 22:22:57 by rdutenke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,7 +99,7 @@ std::ostream & operator<<(std::ostream & o, Bureaucrat const & src)
 {
 	o	<< "Bureaucrat: " 
 		<< src.getName()
-		<< " Grade: "
+		<< ", bureaucrat grade " 
 		<< src.getGrade() 
 		<< std::endl;
 	return (o);
