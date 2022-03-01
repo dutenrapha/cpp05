@@ -1,7 +1,7 @@
 
 FLAGS = -Wall -Wextra -Werror -std=c++98 -fsanitize=address -Wshadow
 CC = c++
-FILE = main.cpp  Bureaucrat.cpp AForm.cpp ShrubberyCreationForm.cpp
+FILE = main.cpp  Bureaucrat.cpp AForm.cpp ShrubberyCreationForm.cpp RobotomyRequestForm.cpp
 NAME = main 
 
 all: $(NAME)

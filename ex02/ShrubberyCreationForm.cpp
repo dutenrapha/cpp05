@@ -6,7 +6,7 @@
 /*   By: rdutenke <rdutenke@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 13:38:52 by rdutenke          #+#    #+#             */
-/*   Updated: 2022/03/01 16:43:02 by rdutenke         ###   ########.fr       */
+/*   Updated: 2022/03/01 17:01:28 by rdutenke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,3 +69,25 @@ bool	ShrubberyCreationForm::execute(Bureaucrat const &executor) const
 	}
 	return (false);	
 }
+
+std::ostream &operator<<(std::ostream & o, ShrubberyCreationForm const & src)
+{
+	o	<< src.getName()
+		<< std::endl
+		<< "Grade to sign: "
+		<< src.getRequiredGradeSign()
+		<< std::endl
+		<< "Grade to execute: "
+		<< src.getRequiredGradeExecute()
+		<< std::endl
+		<< "Target: "
+		<< src.getTarget()
+		<< std::endl
+		<< "Is signed: ";
+	if (src.getIsSigned())
+		o << "Yes." << std::endl;
+	else
+		o << "No." << std::endl;
+	return (o);	
+}
+

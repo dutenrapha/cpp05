@@ -6,7 +6,7 @@
 /*   By: rdutenke <rdutenke@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/18 00:11:15 by rdutenke          #+#    #+#             */
-/*   Updated: 2022/03/01 16:23:00 by rdutenke         ###   ########.fr       */
+/*   Updated: 2022/03/01 17:00:52 by rdutenke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 #include "AForm.hpp"
 // #include "PresidentialPardonForm.hpp"
 #include "ShrubberyCreationForm.hpp"
-// #include "RobotomyRequestForm.hpp"
+#include "RobotomyRequestForm.hpp"
 
 static void	tic_tac(int usleep_time, int duration)
 {
@@ -38,8 +38,8 @@ int main(void)
 	// tic_tac(500000, 5);
 	ShrubberyCreationForm form2("my_beautyfull_ASCII_trees");
 	tic_tac(500000, 5);
-	// RobotomyRequestForm form3("someone");
-	// tic_tac(500000, 5);
+	RobotomyRequestForm form3("someone");
+	tic_tac(500000, 5);
 
 	std::cout << "\n\n---------SIGN AND EXECUTE TEST---------\n\n" << std::endl;
 
@@ -54,8 +54,8 @@ int main(void)
 	// tic_tac(500000, 5);
 	fred.executeForm(form2);
 	tic_tac(500000, 5);
-	// fred.executeForm(form3);
-	// tic_tac(500000, 5);
+	fred.executeForm(form3);
+	tic_tac(500000, 5);
 
 	// john.signForm(form);
 	// tic_tac(500000, 5);
@@ -63,8 +63,8 @@ int main(void)
 	// tic_tac(500000, 5);
 	// fred.signForm(form);
 	// tic_tac(500000, 5);
-	// fred.signForm(form3);
-	// tic_tac(500000, 5);
+	fred.signForm(form3);
+	tic_tac(500000, 5);
 	fred.signForm(form2);
 	tic_tac(500000, 5);
 	
@@ -72,8 +72,8 @@ int main(void)
 	// tic_tac(500000, 5);
 	// fred.executeForm(form);
 	// tic_tac(500000, 5);
-	// fred.executeForm(form3);
-	// tic_tac(500000, 5);
+	fred.executeForm(form3);
+	tic_tac(500000, 5);
 	fred.executeForm(form2);
 	tic_tac(500000, 5);
 

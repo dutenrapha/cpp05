@@ -6,13 +6,16 @@
 /*   By: rdutenke <rdutenke@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 22:32:11 by rdutenke          #+#    #+#             */
-/*   Updated: 2022/03/01 16:32:05 by rdutenke         ###   ########.fr       */
+/*   Updated: 2022/03/01 17:04:25 by rdutenke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef AFORM_H
 #define AFORM_H
 #include <iostream>
+#include <time.h>
+#include <cstdlib>
+#include <math.h>
 #include "Bureaucrat.hpp"
 
 class Bureaucrat;
