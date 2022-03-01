@@ -6,13 +6,13 @@
 /*   By: rdutenke <rdutenke@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 13:38:52 by rdutenke          #+#    #+#             */
-/*   Updated: 2022/03/01 17:01:28 by rdutenke         ###   ########.fr       */
+/*   Updated: 2022/03/01 18:51:32 by rdutenke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ShrubberyCreationForm.hpp"
 
-ShrubberyCreationForm::ShrubberyCreationForm(void) : AForm("ShrubberyCreationForm", 75, 75)
+ShrubberyCreationForm::ShrubberyCreationForm(void) : AForm("ShrubberyCreationForm", 145, 137)
 {
 	std::cout << "ShrubberyCreationForm Constructor" << std::endl;
 }

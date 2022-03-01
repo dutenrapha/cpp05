@@ -1,38 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   RobotomyRequestForm.cpp                            :+:      :+:    :+:   */
+/*   PresidentialPardonForm.cpp                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rdutenke <rdutenke@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/01 16:50:09 by rdutenke          #+#    #+#             */
+/*   Created: 2022/03/01 18:30:31 by rdutenke          #+#    #+#             */
 /*   Updated: 2022/03/01 18:51:34 by rdutenke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "RobotomyRequestForm.hpp"
+#include "PresidentialPardonForm.hpp"
 
-RobotomyRequestForm::RobotomyRequestForm(void): AForm("RobotomyRequestForm", 72, 45)
+PresidentialPardonForm::PresidentialPardonForm(void): AForm("PresidentialPardonForm", 25, 5)
 {
-	std::cout << "RobotomyRequestForm Constructor" << std::endl;
+	std::cout << "PresidentialPardonForm Constructor" << std::endl;
 }
 
-RobotomyRequestForm::RobotomyRequestForm(RobotomyRequestForm const & src)
+PresidentialPardonForm::PresidentialPardonForm(PresidentialPardonForm const & src)
 {
-	std::cout << "RobotomyRequestForm copy constructor called" << std::endl;
+	std::cout << "PresidentialPardonForm copy constructor called" << std::endl;
 	*this = src;
 	return ;
 }
 
-RobotomyRequestForm::~RobotomyRequestForm(void)
+PresidentialPardonForm::~PresidentialPardonForm(void)
 {
-	std::cout << "RobotomyRequestForm Destructor" << std::endl;;
+	std::cout << "PresidentialPardonForm Destructor" << std::endl;;
 	return ;
 }
 
-RobotomyRequestForm & RobotomyRequestForm::operator=(RobotomyRequestForm const & rhs)
+PresidentialPardonForm & PresidentialPardonForm::operator=(PresidentialPardonForm const & rhs)
 {
-	std::cout << "RobotomyRequestForm copy assigment constructor called" << std::endl;
+	std::cout << "PresidentialPardonForm copy assigment constructor called" << std::endl;
 	setName(rhs.getName());
 	setIsSigned(rhs.getIsSigned());
 	setRequiredGradeSign(rhs.getRequiredGradeSign());
@@ -40,27 +40,23 @@ RobotomyRequestForm & RobotomyRequestForm::operator=(RobotomyRequestForm const &
 	return (*this);	
 }
 
-RobotomyRequestForm::RobotomyRequestForm(std::string target): AForm("RobotomyRequestForm", 72, 45)
+PresidentialPardonForm::PresidentialPardonForm(std::string target): AForm("PresidentialPardonForm", 25, 5)
 {
 	this->setTarget(target);
 	std::cout << *this << std::endl;
 }
 
-bool	RobotomyRequestForm::execute(Bureaucrat const &executor) const
+bool	PresidentialPardonForm::execute(Bureaucrat const &executor) const
 {
 	if (AForm::execute(executor))
 	{
-		std::srand((unsigned int)time(NULL));
-		if ((rand() % 2) != 0)
-			std::cout <<"Robotomization Failure"  << std::endl;
-		else
-			std::cout <<"Robotomization completed " << this->getTarget() << "  has been robotomized successfully" << std::endl;
+		std::cout << this->getTarget() << " has been pardoned by Zafod Beeblebrox" << std::endl;
 		return (true);
 	}
 	return (false);	
 }
 
-std::ostream &operator<<(std::ostream & o, RobotomyRequestForm const & src)
+std::ostream &operator<<(std::ostream & o, PresidentialPardonForm const & src)
 {
 	o	<< src.getName()
 		<< std::endl

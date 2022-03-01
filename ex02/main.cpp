@@ -6,7 +6,7 @@
 /*   By: rdutenke <rdutenke@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/18 00:11:15 by rdutenke          #+#    #+#             */
-/*   Updated: 2022/03/01 17:00:52 by rdutenke         ###   ########.fr       */
+/*   Updated: 2022/03/01 19:13:37 by rdutenke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,87 +15,65 @@
 #include <unistd.h>
 #include "Bureaucrat.hpp"
 #include "AForm.hpp"
-// #include "PresidentialPardonForm.hpp"
+#include "PresidentialPardonForm.hpp"
 #include "ShrubberyCreationForm.hpp"
 #include "RobotomyRequestForm.hpp"
 
-static void	tic_tac(int usleep_time, int duration)
-{
-	for (int i = 0; i < duration; i++)
-	{
-		std::cout << "." << std::endl;
-		usleep(usleep_time);
-	}
-}
-
 int main(void)
 {
-	std::cout << std::endl << "----Let the bureaucracy begin----" << std::endl << std::endl;
+	std::cout << ".............................Forms declaration................................" << std::endl;
+	PresidentialPardonForm form("presidentialPardonTest");
+	ShrubberyCreationForm form2("shrubberyCreationTest");
+	RobotomyRequestForm form3("robotomyRequestTest");
+	std::cout << ".............................................................................." << std::endl;
+	std::cout << std::endl;
+	std::cout << std::endl;
+	std::cout << std::endl;
 	
-	std::cout << "\n\n---------FORMS CREATION TEST---------\n\n" << std::endl;
 
-	// PresidentialPardonForm form("the imposible future");
-	// tic_tac(500000, 5);
-	ShrubberyCreationForm form2("my_beautyfull_ASCII_trees");
-	tic_tac(500000, 5);
-	RobotomyRequestForm form3("someone");
-	tic_tac(500000, 5);
-
-	std::cout << "\n\n---------SIGN AND EXECUTE TEST---------\n\n" << std::endl;
-
+	std::cout << ".............................Forms sign and excution.........................." << std::endl;	
 	Bureaucrat	john;
-	tic_tac(500000, 5);
 	Bureaucrat	fred("fred", 1);
-	tic_tac(500000, 5);
+	std::cout << std::endl;
+	std::cout << std::endl;
 	
-	// john.executeForm(form);
-	// tic_tac(500000, 5);
-	// fred.executeForm(form);
-	// tic_tac(500000, 5);
+	john.executeForm(form);
+	john.executeForm(form2);
+	john.executeForm(form3);
+	std::cout << std::endl;
+	std::cout << std::endl;
+	
+	fred.executeForm(form);
 	fred.executeForm(form2);
-	tic_tac(500000, 5);
 	fred.executeForm(form3);
-	tic_tac(500000, 5);
+	std::cout << std::endl;
+	std::cout << std::endl;
 
-	// john.signForm(form);
-	// tic_tac(500000, 5);
-	// std::cout << form << std::endl;
-	// tic_tac(500000, 5);
-	// fred.signForm(form);
-	// tic_tac(500000, 5);
-	fred.signForm(form3);
-	tic_tac(500000, 5);
+	john.signForm(form);
+	john.signForm(form2);
+	john.signForm(form3);
+	std::cout << std::endl;
+	std::cout << std::endl;
+	
+	fred.signForm(form);
 	fred.signForm(form2);
-	tic_tac(500000, 5);
+	fred.signForm(form3);
+	std::cout << std::endl;
+	std::cout << std::endl;
 	
-	// john.executeForm(form);
-	// tic_tac(500000, 5);
-	// fred.executeForm(form);
-	// tic_tac(500000, 5);
-	fred.executeForm(form3);
-	tic_tac(500000, 5);
+	john.executeForm(form);
+	john.executeForm(form2);
+	john.executeForm(form3);
+	std::cout << std::endl;
+	std::cout << std::endl;
+	
+	fred.executeForm(form);
 	fred.executeForm(form2);
-	tic_tac(500000, 5);
-
-	// std::cout << "\n\n---------NEW INCREMENT DECREMENT CHECK TEST---------\n\n" << std::endl;
-
-	// std::cout << john << std::endl;
-	// tic_tac(500000, 5);
-	// std::cout << fred << std::endl;
-	// tic_tac(500000, 5);
-	
-	// fred.incrementGrade();
-	// fred.incrementGrade();
-	// fred.incrementGrade();
-	// john.decrementGrade();
-	// john.decrementGrade();
-	// john.decrementGrade();
-	// tic_tac(500000, 5);
-	
-	// std::cout << fred << std::endl;
-	// tic_tac(500000, 5);
-	// std::cout << john << std::endl;
-	// tic_tac(500000, 5);
+	fred.executeForm(form3);
+	std::cout << ".............................................................................." << std::endl;	
+	std::cout << std::endl;
+	std::cout << std::endl;
+	std::cout << std::endl;
 
 	return (0);
 }
